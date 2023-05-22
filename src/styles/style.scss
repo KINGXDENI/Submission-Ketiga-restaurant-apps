@@ -1,0 +1,1119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import "color";
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+body {
+  background-color: $white !important;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: $primary-color;
+  border-radius: 5rem;
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: $secondary;
+  color: white;
+  padding: 8px;
+  z-index: 99999;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.heading {
+  text-align: center;
+  padding: 1.2rem 0;
+  margin-bottom: 3rem;
+  color: $primary-color;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.heading span {
+  color: $secondary;
+  text-transform: uppercase;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 1.7rem 3.5rem;
+  font-size: 1.7rem;
+  color: $white;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: $ungu;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: $white;
+  background: $bg;
+  box-shadow: $box-shadow;
+}
+
+.btn:focus {
+  border: 0.4rem solid $secondary;
+  border-radius: 0.5rem;
+}
+
+.btnd {
+  margin-top: 1rem;
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 2rem 2rem;
+  font-size: 1.5rem;
+  color: $white;
+  border: 0.1rem solid $primary-color;
+  border-radius: 0.5rem;
+  background: $primary-color;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btnd:hover {
+  color: $primary-color;
+  background: $white;
+  box-shadow: $box-shadow;
+  transition: 0.3s linear;
+}
+
+.btnd i {
+  padding-right: 0.5rem;
+}
+
+.btnd span {
+  font-weight: bold;
+}
+
+.btnd:focus {
+  border: 0.4rem solid $secondary;
+  border-radius: 0.5rem;
+}
+
+/* header */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: $white;
+  box-shadow: $box-shadow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+}
+
+#logo {
+  filter: invert(18%) sepia(6%) saturate(1897%) hue-rotate(211deg)
+    brightness(97%) contrast(86%);
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: $secondary;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.header .logo:focus {
+  border: 0.4rem solid $secondary;
+  border-radius: 0.5rem;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: $secondary;
+  margin: 0 1rem;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.header .navbar a:focus {
+  border: 0.4rem solid $secondary;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+}
+
+.header .navbar a:hover {
+  color: $primary-color;
+}
+
+.header .icons div {
+  font-size: 2.5rem;
+  margin-left: 1.7rem;
+  cursor: pointer;
+  color: $secondary;
+}
+
+.header .icons div:hover {
+  color: $primary-color;
+}
+
+#menu-btn {
+  display: none;
+  min-width: 44px;
+  min-height: 44px;
+  background-color: $white;
+}
+
+#menu-btn:focus {
+  border: 0.4rem solid $secondary;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+}
+
+/* hero */
+
+.hero {
+  min-height: 100vh;
+  background: url(../public/images/heros/hero-image_2.jpg);
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.hero .content {
+  max-width: 60rem;
+  text-align: center;
+}
+
+.hero .content h3 {
+  font-size: 6rem;
+  color: $white;
+  text-transform: uppercase;
+  padding-bottom: 1.5rem;
+}
+
+.hero .content h3 span {
+  text-transform: uppercase;
+  color: $ungu;
+}
+
+/* end */
+
+/* list-resto */
+#resto {
+  background-color: $white;
+}
+
+.list-resto .box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.box {
+  background-color: $card;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.box:hover {
+  transform: translateY(-0.25rem);
+}
+
+.list-resto .box-container .box {
+  box-shadow: $box-shadow;
+  margin-bottom: 20px;
+}
+
+.list-resto .box-container .box .image {
+  height: 35rem;
+  width: 100%;
+  padding: 1.1rem;
+  position: relative; /* Added */
+}
+
+.list-resto .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.list-resto .box-container .box .image .location {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $white;
+  background-color: $red;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.list-resto .box-container .box .content {
+  padding: 2rem;
+}
+
+.list-resto .box-container .box .content .icons {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.list-resto .box-container .box .content .icons .icon {
+  font-size: 1.7rem;
+  color: $red;
+}
+
+.list-resto .box-container .box .content .icons .icon:focus {
+  border: 0.4rem solid $secondary;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+}
+
+.list-resto .box-container .box .content .icons .icon i {
+  padding-right: 0.5rem;
+}
+
+.list-resto .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: $secondary;
+}
+
+.list-resto .box-container .box .content p {
+  font-size: 1.5rem;
+  text-align: justify;
+  color: $secondary;
+  line-height: 2;
+  padding: 1rem 0;
+  display: none;
+}
+
+.list-resto .box-container .box .content .stars {
+  padding-left: 1.7rem;
+  display: inline-block;
+}
+
+.list-resto .box-container .box .content .stars i {
+  font-size: 1.7rem;
+  color: $star;
+}
+
+.list-resto .box-container .box .content .stars span {
+  color: $secondary;
+}
+
+.list-resto .box-container .box .content span {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* end */
+
+/* list-resto-detail */
+#resto-detail {
+  background-color: $white;
+  margin-top: 8.5rem;
+  padding-top: 2rem;
+}
+
+.list-resto-detail .box-container {
+  display: block;
+  margin-top: 2.5rem;
+}
+
+.box {
+  background-color: $card;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.box:hover {
+  transform: translateY(-0.25rem);
+}
+
+.list-resto-detail .box-container .box {
+  box-shadow: $box-shadow;
+  margin-bottom: 20px;
+}
+
+.list-resto-detail .box-container .box .image {
+  position: relative;
+  height: 35rem;
+  width: 100%;
+  padding: 1.1rem;
+  overflow: hidden;
+}
+
+.list-resto-detail .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.list-resto-detail .box-container .box .image .location {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $white;
+  background-color: $red;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.list-resto-detail .box-container .box .content {
+  padding: 2rem;
+}
+
+.list-resto-detail .box-container .box .content .icons {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.list-resto-detail .box-container .box .content .icons .icon {
+  font-size: 1.7rem;
+  color: $red;
+}
+
+.list-resto-detail .box-container .box .content .icons .icon:focus {
+  border: 0.4rem solid $secondary;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+}
+
+.list-resto-detail .box-container .box .content .icons .icon i {
+  padding-right: 0.5rem;
+}
+
+.list-resto-detail .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: $secondary;
+}
+
+.list-resto-detail .box-container .box .content p {
+  font-size: 1.5rem;
+  text-align: justify;
+  color: $secondary;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.list-resto-detail .box-container .box .content .stars {
+  padding-left: 1.7rem;
+  display: inline-block;
+}
+
+.list-resto-detail .box-container .box .content .stars i {
+  font-size: 1.7rem;
+  color: $star;
+}
+
+.list-resto-detail .box-container .box .content .stars span {
+  color: $secondary;
+}
+
+.list-resto-detail .box-container .box .content span {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.category-container {
+  margin-top: 2.5rem;
+}
+
+.category-heading {
+  font-size: 2rem;
+  color: $secondary;
+}
+
+.categories {
+  display: flex;
+  gap: 1rem;
+}
+
+.category {
+  background-color: $primary-color;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.category-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $white;
+}
+
+.menu-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.food-list,
+.drink-list {
+  list-style: none;
+  padding: 0;
+}
+
+.food-item,
+.drink-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 1.7rem;
+}
+
+.food-item::before,
+.drink-item::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ff6347;
+  margin-right: 8px;
+}
+
+.food-item span,
+.drink-item span {
+  font-size: 14px;
+  color: #333;
+}
+
+.food-menu,
+.drink-menu {
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.menu-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.menu-list {
+  background-color: $secondary;
+  color: $white;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 10px;
+  margin-top: 1rem;
+}
+.menu-text {
+  background-color: $primary-color;
+  color: $white;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* end */
+
+/* review */
+.review {
+  background-color: $white;
+}
+.review .slide {
+  background-color: $secondary;
+  padding: 1.5rem;
+  box-shadow: $box-shadow;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.review .slide p {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: $white;
+}
+
+.review .slide .fa-quote-right {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 6rem;
+  color: $white;
+}
+
+.review .slide .user {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  background: $bg;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.review .slide .user img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 15%;
+  object-fit: cover;
+}
+
+.review .slide .user h3 {
+  color: $white;
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.review .slide .user i {
+  font-size: 1.3rem;
+  color: $secondary;
+}
+#review-container {
+  padding: 2rem;
+  background-color: $white;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+#review-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#review-form label {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#review-form input {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#review-form input,
+#review-form textarea {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  color: $secondary;
+  text-transform: capitalize;
+  border: 0.1rem solid transparent;
+  background: $card;
+  border-bottom-color: $primary-color;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+#review-form input:focus,
+#review-form textarea:focus {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  color: $secondary;
+  text-transform: capitalize;
+  border: 0.1rem solid transparent;
+  background: $card;
+  border-bottom-color: $primary-color;
+  border-radius: 0.5rem 0.5rem 0 0;
+  border-top-color: $primary-color;
+  border-right-color: $primary-color;
+  border-left-color: $primary-color;
+}
+#review-form textarea {
+  resize: none;
+  height: 15rem;
+}
+#review-form .btn-review {
+  margin-top: 1rem;
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 1.7rem 3.5rem;
+  font-size: 1.7rem;
+  color: $white;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: $bg;
+  cursor: pointer;
+}
+
+#review-form .btn-review:hover {
+  color: $white;
+  background: $secondary;
+  box-shadow: $box-shadow;
+}
+
+#review-form .btn-review:focus {
+  border: 0.4rem solid $secondary !important;
+  border-radius: 0.5rem;
+  color: $primary-color;
+  background-color: $white;
+}
+/* end */
+
+/* list-resto-favorite */
+#resto-favorite {
+  background-color: $white;
+  margin-top: 8.5rem;
+  padding-top: 2rem;
+  min-height: 100vh;
+}
+
+.list-resto-favorite .box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.box {
+  background-color: $card;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.box:hover {
+  transform: translateY(-0.25rem);
+}
+
+.list-resto-favorite .box-container .box {
+  box-shadow: $box-shadow;
+  margin-bottom: 20px;
+}
+
+.list-resto-favorite .box-container .box .image {
+  position: relative;
+  height: 35rem;
+  width: 100%;
+  padding: 1.1rem;
+  overflow: hidden;
+}
+
+.list-resto-favorite .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.list-resto-favorite .box-container .box .image .location {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $white;
+  background-color: $red;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.list-resto-favorite .box-container .box .content {
+  padding: 2rem;
+}
+
+.list-resto-favorite .box-container .box .content .icons {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.list-resto-favorite .box-container .box .content .icons .icon {
+  font-size: 1.7rem;
+  color: $red;
+}
+
+.list-resto-favorite .box-container .box .content .icons .icon:focus {
+  border: 0.4rem solid $secondary;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+}
+
+.list-resto-favorite .box-container .box .content .icons .icon i {
+  padding-right: 0.5rem;
+}
+
+.list-resto-favorite .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: $secondary;
+}
+
+.list-resto-favorite .box-container .box .content p {
+  font-size: 1.5rem;
+  text-align: justify;
+  color: $secondary;
+  line-height: 2;
+  padding: 1rem 0;
+  display: none;
+}
+
+.list-resto-favorite .box-container .box .content .stars {
+  padding-left: 1.7rem;
+  display: inline-block;
+}
+
+.list-resto-favorite .box-container .box .content .stars i {
+  font-size: 1.7rem;
+  color: $star;
+}
+
+.list-resto-favorite .box-container .box .content .stars span {
+  color: $secondary;
+}
+
+.list-resto-favorite .box-container .box .content span {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* end */
+
+/* services */
+#service {
+  background-color: $primary-color;
+  padding: 5rem;
+}
+.service .heading {
+  text-align: center;
+  padding: 1.2rem 0;
+  margin-bottom: 3rem;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.service .heading span {
+  color: $card;
+  text-transform: uppercase;
+}
+.service .box-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.service .box-container .box {
+  text-align: center;
+  background: $white;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow;
+  position: relative;
+  overflow: hidden;
+  color: $primary-color;
+}
+
+.service .box-container .box:hover {
+  background: $bg;
+  color: $white;
+}
+
+.service .box-container .box .content {
+  padding: 2rem;
+}
+
+.service .box-container .box .content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.service .box-container .box .content p {
+  font-size: 1.5rem;
+  text-align: start;
+}
+
+.service .box-container .box .content i {
+  background: none;
+}
+/* end */
+
+/* Reservation */
+#Reservation {
+  background-color: $white;
+}
+
+.Reservation .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.Reservation .row .image {
+  flex: 1 1 30rem;
+}
+
+.Reservation .row .image img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.Reservation .row form {
+  flex: 1 1 50rem;
+  padding: 5rem;
+  padding-top: 10rem;
+}
+
+.Reservation .row form .inputBox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Reservation .row form .inputBox input,
+.Reservation .row form textarea {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  color: $secondary;
+  text-transform: capitalize;
+  border: 0.1rem solid transparent;
+  background: $card;
+  border-bottom-color: $primary-color;
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 49%;
+}
+
+.Reservation .row form .inputBox input:focus,
+.Reservation .row form textarea:focus {
+  border-top-color: $primary-color;
+  border-right-color: $primary-color;
+  border-left-color: $primary-color;
+}
+
+.Reservation .row form textarea {
+  width: 100%;
+  resize: none;
+  height: 15rem;
+}
+/* end */
+
+/* footer */
+.footer {
+  background: $bg;
+  text-align: center;
+  padding: 3rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: $white;
+}
+
+/* sweetalert */
+.my-swal {
+  width: 100%;
+  height: 100%;
+}
+.my-swal-container,
+.my-swal-popup,
+.my-swal-title {
+  font-size: 2.3rem !important;
+  color: $card !important;
+}
+.my-swal-popup,
+.my-swal-title {
+  background-color: $bg !important;
+}
+
+.prevent-swal-padding {
+  padding-right: 0 !important;
+}
+
+/*
+  Like
+*/
+.like-button {
+  min-width: 44px;
+  min-height: 44px;
+  z-index: 999;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 20px;
+  color: $white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.like-button:hover {
+  background-color: $secondary;
+}
+.like-button:focus {
+  background-color: $secondary;
+  border: 0.4rem solid $ungu;
+  border-radius: 50%rem;
+}
+.like-button-un {
+  min-width: 44px;
+  min-height: 44px;
+  z-index: 999;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $ungu !important;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 20px;
+  color: $white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.like-button-un:hover {
+  background-color: $primary-color !important;
+}
+
+.like-button-un:focus {
+  background-color: $primary-color !important;
+  border: 0.4rem solid $ungu;
+  border-radius: 50%rem;
+}
+
+.loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading-indicator__circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  border-top-color: $primary-color;
+  animation: loading-animation 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+.loading-indicator__text {
+  font-size: 18px;
+  color: $primary-color;
+}
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.error-page__title {
+  font-size: 8rem;
+  color: $primary-color;
+  margin-bottom: 10px;
+}
+
+.error-page__message {
+  font-size: 4rem;
+  color: $bg;
+}
+
+@keyframes loading-animation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#resto,
+#resto-detail,
+#resto-favorite {
+  scroll-margin-top: 10px;
+}

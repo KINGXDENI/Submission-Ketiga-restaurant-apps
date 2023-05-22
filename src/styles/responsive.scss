@@ -1,0 +1,111 @@
+@import "color";
+/* media queries */
+@media (max-width: 1390px) {
+  .box-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    min-width: 1000px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .hero {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem 3rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .box-container {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  #menu-btn {
+    display: inline-block;
+    color: $secondary;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow: $box-shadow;
+    border-radius: 0.5rem;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header .navbar.active {
+    right: 2rem;
+    transition: 0.4s linear;
+  }
+
+  .header .navbar a {
+    font-size: 2rem;
+    margin: 2rem 2.5rem;
+  }
+
+  .hero .content h3 {
+    font-size: 4.5rem;
+  }
+
+  .about .row .image img {
+    width: 100%;
+    height: 50%;
+  }
+  .Reservation .row form {
+    padding-top: 5rem;
+  }
+  .service .box-container .box .content p {
+    font-size: 1rem;
+  }
+  .error-page__title {
+    font-size: 5rem;
+  }
+
+  .error-page__message {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  .hero .content h3 {
+    font-size: 3.5rem;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+  .service .heading {
+    font-size: 3rem;
+  }
+  .error-page__title {
+    font-size: 4rem;
+  }
+
+  .error-page__message {
+    font-size: 2rem;
+  }
+}

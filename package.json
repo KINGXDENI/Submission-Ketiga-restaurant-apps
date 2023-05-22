@@ -1,0 +1,63 @@
+{
+  "name": "restaurant-apps-lite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./src",
+    "start-dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "serve": "http-server dist",
+    "build-serve": "npm run build && npm run serve",
+    "test": "karma start"
+  },
+  "keywords": [],
+  "author": "Muh Deni Setiawan <ds767365@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.1",
+    "jasmine-ajax": "^4.0.0",
+    "jasmine-core": "^4.2.0",
+    "karma": "^5.2.3",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-firefox-launcher": "^2.1.2",
+    "karma-jasmine": "^4.0.2",
+    "karma-sourcemap-loader": "^0.3.8",
+    "karma-webpack": "^5.0.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2",
+    "webpack-merge": "^5.8.0",
+    "whatwg-fetch": "^3.6.2"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "flatpickr": "^4.6.13",
+    "idb": "^7.1.1",
+    "regenerator-runtime": "^0.13.9",
+    "sweetalert2": "^11.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KINGXDENI/Submission-Pertama-restaurant-apps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KINGXDENI/Submission-Pertama-restaurant-apps/issues"
+  },
+  "homepage": "https://github.com/KINGXDENI/Submission-Pertama-restaurant-apps#readme",
+  "description": ""
+}
