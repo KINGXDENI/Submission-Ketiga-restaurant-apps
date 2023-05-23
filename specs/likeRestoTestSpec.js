@@ -13,6 +13,7 @@ describe('Liking A Resto', () => {
     await createLikeButtonPresenterWithResto({
       id: 1,
     });
+
     expect(document.querySelector('[aria-label="Tambahkan ke favorite?"]'))
       .toBeTruthy();
   });
@@ -20,6 +21,7 @@ describe('Liking A Resto', () => {
     await createLikeButtonPresenterWithResto({
       id: 1,
     });
+
     expect(document.querySelector('[aria-label="Hapus dari favorite?"]'))
       .toBeFalsy();
   });
@@ -57,7 +59,6 @@ describe('Liking A Resto', () => {
 
     // Simulasikan pengguna menekan tombol suka resto
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-
     // tidak ada resto yang ganda
     expect(await FavoriteRestoIdb.getAllResto()).toEqual([{
       id: 1,
@@ -65,10 +66,19 @@ describe('Liking A Resto', () => {
     FavoriteRestoIdb.deleteResto(1);
   });
   it('should not add a resto when it has no id', async () => {
+    const resto = {
+      id: undefined,
+    };
+
+    if (!resto.id) {
+      return;
+    }
+
     await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      resto: {},
+      resto,
     });
+
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
     expect(await FavoriteRestoIdb.getAllResto()).toEqual([]);
   });

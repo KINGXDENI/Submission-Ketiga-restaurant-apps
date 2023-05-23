@@ -21,7 +21,6 @@ describe('Unliking A Resto', () => {
     await createLikeButtonPresenterWithResto({
       id: 1,
     });
-
     expect(document.querySelector('[aria-label="Hapus dari favorite?"]'))
       .toBeTruthy();
   });
