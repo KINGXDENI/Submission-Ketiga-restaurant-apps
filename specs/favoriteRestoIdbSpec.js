@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import itActsAsFavoriteRestoModel from './contract/favoriteRestoContract';
 import FavoriteRestoIdb from '../src/scripts/data/favorite-resto-idb';
 

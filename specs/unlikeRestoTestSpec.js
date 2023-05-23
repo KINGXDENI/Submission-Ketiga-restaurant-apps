@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import FavoriteRestoIdb from '../src/scripts/data/favorite-resto-idb';
 import createLikeButtonPresenterWithResto from './helpers/testFactories';
 
