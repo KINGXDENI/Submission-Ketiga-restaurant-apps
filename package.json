@@ -10,7 +10,8 @@
     "build-serve": "npm run build && npm run serve",
     "test": "karma start",
     "e2e": "codeceptjs run --steps",
-    "build-image": "node sharp.js"
+    "build-image": "node sharp.js",
+    "build-dev": "webpack --config webpack.dev.js"
   },
   "keywords": [],
   "author": "Muh Deni Setiawan <ds767365@gmail.com>",
