@@ -71,7 +71,7 @@ const Home = {
       <h1 class="heading"> Reservation <span> now </span> </h1>
       <div class="row">
         <div class="image">
-          <img src="images/reservation.png" alt="">
+          <img src="images/reservation.png" height="500px" width="500px"; alt="">
         </div>
         <form>
           <div class="inputBox">
