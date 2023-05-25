@@ -12,7 +12,7 @@ exports.config = {
   output: 'e2e/outputs',
   helpers: {
     Puppeteer: {
-      url: 'http://localhost:9122',
+      url: 'http://localhost:9162',
       show: true,
       windowSize: '1200x900',
     },
