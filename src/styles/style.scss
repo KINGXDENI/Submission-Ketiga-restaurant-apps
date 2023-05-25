@@ -224,7 +224,7 @@ section {
 
 .hero {
   min-height: 100vh;
-  background: url(../public/images/heros/hero-image_2.jpg);
+  background: $imageLarge;
   background-size: cover !important;
   background-position: center !important;
   position: relative;
@@ -1102,6 +1102,23 @@ section {
 .error-page__message {
   font-size: 4rem;
   color: $bg;
+}
+
+.no-favorite-page {
+  
+  display: none;
+}
+
+.no-favorite-message {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-size: 5rem;
+  color: $primary-color;
+  margin-top: 10px;
+  text-align: center;
 }
 
 @keyframes loading-animation {

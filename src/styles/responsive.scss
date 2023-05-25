@@ -64,6 +64,9 @@
     margin: 2rem 2.5rem;
   }
 
+  .hero{
+    background: $imageMedium;
+  }
   .hero .content h3 {
     font-size: 4.5rem;
   }
@@ -85,13 +88,18 @@
   .error-page__message {
     font-size: 3rem;
   }
+  .no-favorite-message {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 480px) {
   html {
     font-size: 50%;
   }
-
+  .hero{
+    background: $imageSmall;
+  }
   .hero .content h3 {
     font-size: 3.5rem;
   }

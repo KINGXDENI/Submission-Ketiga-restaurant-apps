@@ -1,7 +1,7 @@
-import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/style.scss';
 import '../styles/responsive.scss';
 import './utils/header-footer-cstom';
+import './vendor';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 import {
@@ -9,6 +9,8 @@ import {
 } from './utils/button-func';
 import setSkipLinkHref from './utils/skip-content';
 
+const START = 4;
+const NUMBER_OF_IMAGES = 50;
 const app = new App({
   button: document.querySelector('#menu-btn'),
   drawer: document.querySelector('.navbar'),

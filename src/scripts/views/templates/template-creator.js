@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 const createRestoDetailTemplate = (resto) => `
   <div class="box">
     <div class="image">
-      <img src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL_LARGE + resto.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" class="thumb-res" alt="${resto.name}">
+      <img class="lazyload" data-src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL_MEDIUM + resto.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" class="thumb-res" alt="${resto.name}">
       <span class="location">${resto.city}</span>
     </div>
     <div class="content">
@@ -62,11 +62,11 @@ const createReviewTemplate = (resto) => `
             </div>
         </div>
     `).join('')}`;
+
 const createRestoItemTemplate = (resto) => `
-<div class="resto-item">
     <div class="box" >
       <div class="image">
-            <img src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL_MEDIUM + resto.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" class="thumb-res" alt="${resto.name}">
+            <img class="lazyload" data-src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL_MEDIUM + resto.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" class="thumb-res" alt="${resto.name}">
           <span class="location">${resto.city}</span>
             </div>
           <div class="content">
@@ -77,15 +77,14 @@ const createRestoItemTemplate = (resto) => `
             </div>
             <div class="stars">
               <i class="fas fa-star"></i>
-              <span class="rate-res">${resto.rating} || '-'</span>
+              <span class="rate-res">${resto.rating ? resto.rating : '-'}</span>
             </div>
-            <p class="desc-res">${resto.description} || '-'</p>
+            <p class="desc-res">${resto.description ? resto.description : '-'} </p>
             <a class="btnd" href="#/detail/${resto.id}" tabindex="0" aria-label="Tombol details" title="Detail">
   <i class="fas fa-eye"></i>
   <span>Details</span>
 </a>
         </div>
-         </div>
          </div>
     `;
 const createLikeButtonTemplate = () => `

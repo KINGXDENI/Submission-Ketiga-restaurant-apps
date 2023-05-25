@@ -9,13 +9,14 @@ module.exports = merge(common, {
   devServer: {
     static: path.resolve(__dirname, 'dist'),
     open: true,
-    port: 9110,
+    port: 9190,
     client: {
       overlay: {
         errors: true,
         warnings: true,
       },
     },
+    liveReload: true,
     compress: true,
   },
   plugins: [

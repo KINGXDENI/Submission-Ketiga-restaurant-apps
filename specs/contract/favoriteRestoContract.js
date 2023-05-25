@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const itActsAsFavoriteRestoModel = (favoriteResto) => {
   it('should return the resto that has been added', async () => {
     favoriteResto.putResto({
@@ -94,18 +93,6 @@ const itActsAsFavoriteRestoModel = (favoriteResto) => {
         id: 3,
       },
       ]);
-  });
-  it('should be able to search for movies', async () => {
-    favoriteResto.putResto({ id: 1, title: 'resto a' });
-    favoriteResto.putResto({ id: 2, title: 'resto b' });
-    favoriteResto.putResto({ id: 3, title: 'resto abc' });
-    favoriteResto.putResto({ id: 4, title: 'ini mah resto abcd' });
-
-    expect(await favoriteResto.searchResto('resto a')).toEqual([
-      { id: 1, title: 'resto a' },
-      { id: 3, title: 'resto abc' },
-      { id: 4, title: 'ini mah resto abcd' },
-    ]);
   });
 };
 

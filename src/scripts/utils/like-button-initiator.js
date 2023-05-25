@@ -5,9 +5,7 @@ import {
 } from '../views/templates/template-creator';
 
 const LikeButtonInitiator = {
-  async init({
-    likeButtonContainer, favoriteResto, resto,
-  }) {
+  async init({ likeButtonContainer, favoriteResto, resto }) {
     this._likeButtonContainer = likeButtonContainer;
     this._resto = resto;
     this._favoriteResto = favoriteResto;
@@ -18,7 +16,7 @@ const LikeButtonInitiator = {
   async _renderButton() {
     const { id } = this._resto;
 
-    if (id && await this._isRestoExist(id)) {
+    if (await this._isRestoExist(id)) {
       this._renderLiked();
     } else {
       this._renderLike();
@@ -36,22 +34,19 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      // eslint-disable-next-line no-prototype-builtins
-      if (this._resto.hasOwnProperty('id')) {
-        await this._favoriteResto.putResto(this._resto);
-        this._renderButton();
-        Swal.fire({
-          icon: 'success',
-          title: 'Resto berhasil ditambahkan ke favorit',
-          showConfirmButton: false,
-          timer: 1500,
-          customClass: {
-            container: 'my-swal-container',
-            popup: 'my-swal-popup',
-            title: 'my-swal-title',
-          },
-        });
-      }
+      await this._favoriteResto.putResto(this._resto);
+      this._renderButton();
+      Swal.fire({
+        icon: 'success',
+        title: 'Resto berhasil ditambahkan ke favorit',
+        showConfirmButton: false,
+        timer: 1500,
+        customClass: {
+          container: 'my-swal-container',
+          popup: 'my-swal-popup',
+          title: 'my-swal-title',
+        },
+      });
     });
   },
 

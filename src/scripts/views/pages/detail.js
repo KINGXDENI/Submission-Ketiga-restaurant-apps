@@ -94,6 +94,19 @@ const Detail = {
               title: 'my-swal-title',
             },
           });
+        } else if (!window.navigator.onLine) {
+          Swal.fire({
+            icon: 'warning',
+            title: 'Tidak bisa menambahkan review saat mode offline',
+            text: '',
+            showConfirmButton: false,
+            timer: 2500,
+            customClass: {
+              container: 'my-swal-container',
+              popup: 'my-swal-popup',
+              title: 'my-swal-title',
+            },
+          });
         } else {
           await fetch(urll, options);
           const reviews = await RestauranSource.detailResto(url.id);

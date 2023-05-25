@@ -33,19 +33,6 @@ const FavoriteRestoArray = {
     // kecuali resto dengan id == id
     favoriteResto = favoriteResto.filter((resto) => resto.id !== id);
   },
-
-  searchResto(query) {
-    return this.getAllResto()
-      .filter((movie) => {
-        const loweredCaseRestoTitle = (movie.title || '-').toLowerCase();
-        const jammedRestoTitle = loweredCaseRestoTitle.replace(/\s/g, '');
-
-        const loweredCaseQuery = query.toLowerCase();
-        const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
-
-        return jammedRestoTitle.indexOf(jammedQuery) !== -1;
-      });
-  },
 };
 
 describe('Favorite Resto Array Contract Test Implementation', () => {

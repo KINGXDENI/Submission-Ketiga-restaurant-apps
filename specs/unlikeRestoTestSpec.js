@@ -18,35 +18,27 @@ describe('Unliking A Resto', () => {
   });
 
   it('should display unlike widget when the resto has been liked', async () => {
-    await createLikeButtonPresenterWithResto({
-      id: 1,
-    });
+    await createLikeButtonPresenterWithResto({ id: 1 });
+
     expect(document.querySelector('[aria-label="Hapus dari favorite?"]'))
       .toBeTruthy();
   });
 
   it('should not display like widget when the resto has been liked', async () => {
-    await createLikeButtonPresenterWithResto({
-      id: 1,
-    });
+    await createLikeButtonPresenterWithResto({ id: 1 });
 
     expect(document.querySelector('[aria-label="Tambahkan ke favorite?"]'))
       .toBeFalsy();
   });
-
   it('should be able to remove liked resto from the list', async () => {
-    await createLikeButtonPresenterWithResto({
-      id: 1,
-    });
+    await createLikeButtonPresenterWithResto({ id: 1 });
     await FavoriteRestoIdb.deleteResto(1);
     document.querySelector('[aria-label="Hapus dari favorite?"]').dispatchEvent(new Event('click'));
     expect(await FavoriteRestoIdb.getAllResto()).toEqual([]);
   });
 
   it('should not throw error if the unliked resto is not in the list', async () => {
-    await createLikeButtonPresenterWithResto({
-      id: 1,
-    });
+    await createLikeButtonPresenterWithResto({ id: 1 });
     // hapus dulu resto dari daftar resto yang disukai
     await FavoriteRestoIdb.deleteResto(1);
     // kemudian, simulasikan pengguna menekan widget batal menyukai resto
